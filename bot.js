@@ -6,12 +6,14 @@ import guildCheck from "./utils/guildCheck.js";
 import loadCommands from "./utils/loadCommands.js";
 import runCommand from "./utils/runCommand.js";
 import { clearTempChannelsOnStartup, createTempChannel, deleteTempChannel } from "./utils/tempVoice.js";
+import preCheck from "./utils/preCheck.js";
 
 /* BOT.JS */
 
 login();
 
 client.once(Events.ClientReady, async () => {
+    await preCheck();
     await guildCheck();
     await loadCommands();
     await setPresence();
