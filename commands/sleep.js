@@ -1,6 +1,8 @@
 import { SlashCommandBuilder, MessageFlags, ContainerBuilder, Colors, TextDisplayBuilder, ChannelType } from "discord.js";
 import "dotenv/config";
 
+/* commands/sleep.js */
+
 export default {
     data: new SlashCommandBuilder()
         .setName("sleep")
